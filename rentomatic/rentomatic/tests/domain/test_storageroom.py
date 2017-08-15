@@ -1,5 +1,6 @@
 from django.test import TestCase
 import uuid
+from src.domain.storageroom import StorageRoom
 
 class TestStorageRoom(TestCase):
 
