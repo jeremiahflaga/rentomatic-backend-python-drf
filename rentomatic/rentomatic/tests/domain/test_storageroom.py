@@ -1,4 +1,4 @@
-from django.test import TestCase
+from unittest import TestCase
 import uuid
 from src.domain.storageroom import StorageRoom
 
