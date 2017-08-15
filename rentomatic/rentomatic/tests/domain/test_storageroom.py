@@ -9,8 +9,26 @@ class TestStorageRoom(TestCase):
         storageroom = StorageRoom(code, size=200, price=10,
                            longitude='-0.09998975',
                            latitude='51.75436293')
-        self.assertEquals(code,  storageroom.code)
-        self.assertEquals(storageroom.size, 200)
-        self.assertEquals(storageroom.price, 10)
-        self.assertEquals(storageroom.longitude, -0.09998975)
-        self.assertEquals(storageroom.latitude, 51.75436293)
+        assert storageroom.code == code
+        assert storageroom.size == 200
+        assert storageroom.price == 10
+        assert storageroom.longitude == -0.09998975
+        assert storageroom.latitude == 51.75436293
+
+    
+    def test_storageroom_model_from_dict(self):
+        code = uuid.uuid4()
+        storageroom = StorageRoom.from_dict(
+            {
+                'code': code,
+                'size': 200,
+                'price': 10,
+                'longitude': '-0.09998975',
+                'latitude': '51.75436293'
+            }
+        )
+        assert storageroom.code == code
+        assert storageroom.size == 200
+        assert storageroom.price == 10
+        assert storageroom.longitude == -0.09998975
+        assert storageroom.latitude == 51.75436293
