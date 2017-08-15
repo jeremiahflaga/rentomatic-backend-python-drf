@@ -10,3 +10,12 @@ My purpose for this is to practice the use of TDD and the Clean Architecture mod
 [Quickstart - Django REST framework](http://www.django-rest-framework.org/tutorial/quickstart/)
 
 [Test-Driven Development with Python](https://www.obeythetestinggoat.com/book/)
+
+
+## How-tos
+
+How to run tests in Django
+
+```
+python manage.py test
+```
