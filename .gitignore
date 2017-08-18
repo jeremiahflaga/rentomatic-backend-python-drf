@@ -100,3 +100,9 @@ ENV/
 
 # VS Code
 .vscode
+
+# Visual Studio
+.vs
+
+# PyCharm
+.idea

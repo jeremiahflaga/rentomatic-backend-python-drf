@@ -2,8 +2,8 @@ from src.domain.storageroom import StorageRoom
 
 class StorageRoomListUseCase(object):
 
-    def __init__(self):
-        pass
+    def __init__(self, repository):
+        self.repository = repository
         
     def execute(self):
         storageroom1 = {

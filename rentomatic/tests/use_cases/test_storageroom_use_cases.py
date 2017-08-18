@@ -1,6 +1,7 @@
 from unittest import TestCase
 from src.use_cases.storageroom_use_cases import StorageRoomListUseCase
 from src.domain.storageroom import StorageRoom
+from tests.use_cases.fakes import StorageRoomRepositorySpy
 
 
 class TestStorageRoomListUseCase(TestCase):
@@ -14,7 +15,9 @@ class TestStorageRoomListUseCase(TestCase):
             latitude='51.75436293',
         )
 
-        storageroom_list_use_case = StorageRoomListUseCase()
+        repository = StorageRoomRepositorySpy()
+
+        storageroom_list_use_case = StorageRoomListUseCase(repository)
 
         response = storageroom_list_use_case.execute()
 

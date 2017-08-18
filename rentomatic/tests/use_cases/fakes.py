@@ -1,0 +1,3 @@
+
+class StorageRoomRepositorySpy(object):
+    pass
